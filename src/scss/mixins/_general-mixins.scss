@@ -143,3 +143,17 @@
     margin-top: 30px;
   }
 }
+
+@mixin logoStyle() {
+  width: auto;
+  margin: 0px;
+  font-family: $pb;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 40px;
+  color: rgba(#fff, 0.4);
+  text-transform: capitalize;
+  background: url('../../components/logo/img/logo__bg.webp') no-repeat 178% 44% /
+    120%;
+  background-clip: text;
+}
