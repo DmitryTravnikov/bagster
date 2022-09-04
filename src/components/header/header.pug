@@ -1,4 +1,18 @@
+include ../logo/logo
+
 mixin header(props = {})
   - const {  } = props;
 
   .header
+    .header__wrapper.wrapper
+      +logo
+      .header__menu-n-link-container
+        nav.header__menu
+          a.prevdef.header__menu-link(href="#") Home
+          a.prevdef.header__menu-link(href="#") Feature
+          a.prevdef.header__menu-link(href="#") About
+          a.prevdef.header__menu-link(href="#") Product
+          a.prevdef.header__menu-link(href="#") Feedback
+          a.prevdef.header__menu-link(href="#") Partners
+          a.prevdef.header__menu-link(href="#") Contact
+        a.prevdef.header__shop-now-link(href="#") Shop now
