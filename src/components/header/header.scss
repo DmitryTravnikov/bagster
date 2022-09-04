@@ -1,0 +1,107 @@
+@import '../../scss/variables';
+@import '../../scss/mixins';
+// @import '~bootstrap/scss/bootstrap-reboot';
+
+.header {
+  padding: 70px 0px;
+  background: $space-grey;
+  @media only screen and (min-width: 1200px) {
+    padding: 26px 0px 15px;
+  }
+  &__wrapper {
+    @include flex(column, wrap, flex-start, center);
+    @media only screen and (min-width: 1200px) {
+      @include wrapper(1149px, auto);
+      @include flex(row, wrap, space-between, center);
+    }
+  }
+  &__menu-n-link-container {
+    width: 100%;
+    @include flex(column, wrap, flex-start, center);
+    @media only screen and (min-width: 992px) {
+      @include flex(row, wrap, center, center);
+      margin-top: 30px;
+    }
+    @media only screen and (min-width: 1200px) {
+      margin-top: 6px;
+      width: auto;
+    }
+  }
+  &__menu {
+    width: 100%;
+    @include flex(column, wrap, flex-start, center);
+    margin-top: 40px;
+    @media only screen and (min-width: 576px) {
+      @include flex(row, wrap, center, center);
+      margin-top: 60px;
+    }
+    @media only screen and (min-width: 992px) {
+      width: auto;
+      margin-top: 0px;
+      margin-right: 60px;
+    }
+    @media only screen and (min-width: 1200px) {
+      margin-right: 91px;
+    }
+  }
+  &__menu-link {
+    text-decoration: none;
+    font-family: $pr;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: rgba(#fff, 0.6);
+    text-transform: capitalize;
+    transition: 0.2s;
+    margin-top: 20px;
+    &:hover {
+      color: #fff;
+    }
+    &:first-child {
+      margin-top: 0px;
+    }
+    @media only screen and (min-width: 576px) {
+      margin-top: 0px;
+      margin-right: 15px;
+      &:last-child {
+        margin-right: 0px;
+      }
+    }
+    @media only screen and (min-width: 768px) {
+      margin-right: 35px;
+    }
+    @media only screen and (min-width: 1200px) {
+      margin-right: 40px;
+    }
+  }
+  &__shop-now-link {
+    @include linkStyle();
+    margin-top: 40px;
+    @media only screen and (min-width: 992px) {
+      margin-top: 0px;
+    }
+  }
+}
+
+// Bootstrap Media Queries
+// @include media-breakpoint-up(sm) {}
+// @include media-breakpoint-up(md) {}
+// @include media-breakpoint-up(lg) {}
+// @include media-breakpoint-up(xl) {}
+// @include media-breakpoint-up(xxl) {}
+
+// Media Queries
+@media only screen and (min-width: 576px) {
+}
+@media only screen and (min-width: 768px) {
+}
+@media only screen and (min-width: 992px) {
+}
+@media only screen and (min-width: 1200px) {
+}
+@media only screen and (min-width: 1400px) {
+}
+
+* {
+  // @include outline();
+}
