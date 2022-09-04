@@ -3,6 +3,7 @@
 // @import '~bootstrap/scss/bootstrap-reboot';
 
 .logo {
+  @include logoStyle();
 }
 
 // Bootstrap Media Queries
