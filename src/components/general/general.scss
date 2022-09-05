@@ -12,6 +12,9 @@
     @media only screen and (min-width: 1200px) {
       @include wrapper(1149px, auto);
     }
+    @media only screen and (min-width: 1400px) {
+      @include wrapper(1404px, auto);
+    }
   }
   &__content {
     width: 100%;
@@ -40,6 +43,13 @@
         url('../general/img/general__happy-girl.webp') no-repeat 100% 100% /
           680px;
     }
+    @media only screen and (min-width: 1400px) {
+      padding: 110px 0px 210px 128px;
+      background: url('../general/img/general__discount.webp') no-repeat 339px
+          455px / 229px,
+        url('../general/img/general__happy-girl.webp') no-repeat 103% 100% /
+          849px;
+    }
   }
   &__text {
     width: 100%;
@@ -49,6 +59,9 @@
     }
     @media only screen and (min-width: 768px) {
       @include flex(column, wrap, flex-start, flex-start);
+    }
+    @media only screen and (min-width: 1400px) {
+      width: 440px;
     }
   }
   &__slogan {
@@ -80,12 +93,15 @@
         line-height: 79px;
       }
     }
+    @media only screen and (min-width: 768px) {
+      text-align: left;
+    }
     @media only screen and (min-width: 992px) {
       font-size: 61px;
       line-height: 79px;
     }
-    @media only screen and (min-width: 768px) {
-      text-align: left;
+    @media only screen and (min-width: 1400px) {
+      margin-top: 9px;
     }
   }
   &__paragraph {
@@ -94,9 +110,13 @@
     @media only screen and (min-width: 768px) {
       text-align: left;
     }
+    @media only screen and (min-width: 1400px) {
+      margin-top: 27px;
+    }
   }
   &__join-shop-link {
     @include linkStyle();
+    margin-top: 36px;
   }
 }
 
