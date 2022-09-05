@@ -16,6 +16,10 @@
       width: 600px;
       @include flex(row, wrap, space-between, center);
     }
+    @media only screen and (min-width: 1200px) {
+      width: 100%;
+      @include flex(row, wrap, space-between, center);
+    }
   }
   &__item {
     width: 100%;
@@ -31,6 +35,13 @@
     @media only screen and (min-width: 768px) {
       &:first-child {
         margin-top: 50px;
+      }
+    }
+    @media only screen and (min-width: 1200px) {
+      width: 230px;
+      margin-top: 0px;
+      &:first-child {
+        margin-top: 0px;
       }
     }
   }
