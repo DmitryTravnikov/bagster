@@ -3,11 +3,23 @@
 // @import '~bootstrap/scss/bootstrap-reboot';
 
 .feature {
+  background: #fff;
+  padding: 70px 0px;
   &__wrapper {
+    @include flex(column, wrap, flex-start, center);
   }
   &__content {
+    width: 100%;
+    @include flex(column, wrap, flex-start, center);
   }
   &__item {
+    width: 100%;
+    text-decoration: none;
+    @include flex(column, wrap, flex-start, center);
+    margin-top: 50px;
+    &:first-child {
+      margin-top: 0px;
+    }
   }
   &__item1 {
   }
@@ -18,18 +30,63 @@
   &__item4 {
   }
   &__item-headline {
+    width: auto;
+    margin: 0px;
+    font-family: $pm;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    color: rgba($space-grey, 0.8);
+    text-transform: capitalize;
+    text-align: center;
+    transition: 0.2s;
   }
   &__splitter {
+    border: none;
+    width: 100%;
+    height: 1px;
+    background: #fef5e6;
+    position: relative;
+    margin-top: 37px;
+    display: none;
+    &::before {
+      content: '';
+      width: 100%;
+      height: 5px;
+      background: $orange;
+      border-radius: 3px;
+      position: absolute;
+      top: 50%;
+      left: 0px;
+      transform: translateY(-50%);
+      transition: 0.2s;
+      opacity: 0;
+    }
   }
   &__image {
+    width: 100%;
+    height: 306px;
+    border: 1px solid #d1d1d1;
+    border-radius: 10px;
+    margin-top: 43px;
   }
   &__image1 {
+    background: url('../feature/img/feature__item1.webp') no-repeat center;
   }
   &__image2 {
+    background: url('../feature/img/feature__item2.webp') no-repeat center;
   }
   &__image3 {
+    background: url('../feature/img/feature__item3.webp') no-repeat center;
   }
   &__image4 {
+    background: url('../feature/img/feature__item4.webp') no-repeat center;
+  }
+  &__item:hover &__item-headline {
+    color: $space-grey;
+  }
+  &__item:hover &__splitter::before {
+    opacity: 1;
   }
 }
 
