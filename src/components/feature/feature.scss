@@ -5,6 +5,9 @@
 .feature {
   background: #fff;
   padding: 70px 0px;
+  @media only screen and (min-width: 1400px) {
+    padding: 129px 0px 80px;
+  }
   &__wrapper {
     @include flex(column, wrap, flex-start, center);
   }
@@ -19,6 +22,9 @@
     @media only screen and (min-width: 1200px) {
       width: 100%;
       @include flex(row, wrap, space-between, center);
+    }
+    @media only screen and (min-width: 1400px) {
+      @include flex(row, wrap, center, center);
     }
   }
   &__item {
@@ -42,6 +48,13 @@
       margin-top: 0px;
       &:first-child {
         margin-top: 0px;
+      }
+    }
+    @media only screen and (min-width: 1400px) {
+      width: 264px;
+      margin-right: 30px;
+      &:last-child {
+        margin-right: 0px;
       }
     }
   }
@@ -99,6 +112,9 @@
         left: 100%;
       }
     }
+    @media only screen and (min-width: 1400px) {
+      margin-top: 44px;
+    }
   }
   &__image {
     width: 100%;
@@ -106,6 +122,9 @@
     border: 1px solid #d1d1d1;
     border-radius: 10px;
     margin-top: 43px;
+    @media only screen and (min-width: 1400px) {
+      margin-top: 37px;
+    }
   }
   &__image1 {
     background: url('../feature/img/feature__item1.webp') no-repeat center;
