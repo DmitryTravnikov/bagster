@@ -3,17 +3,44 @@
 // @import '~bootstrap/scss/bootstrap-reboot';
 
 .general {
+  background: $space-grey;
+  padding: 70px 0px;
   &__wrapper {
+    @include flex(column, wrap, flex-start, center);
   }
   &__content {
+    width: 100%;
+    @include flex(column, wrap, flex-start, center);
   }
   &__slogan {
+    @include sloganStyle();
+    margin-top: 0px;
   }
   &__headline {
+    width: auto;
+    margin: 0px;
+    font-family: $pb;
+    font-weight: 700;
+    font-size: 37px;
+    line-height: 55px;
+    color: #fff;
+    text-transform: capitalize;
+    text-align: center;
+    margin-top: 5px;
+    span {
+      @include logoStyle();
+      font-size: 37px;
+      line-height: 55px;
+      color: rgba(#fff, 0.4);
+      text-transform: capitalize;
+    }
   }
   &__paragraph {
+    @include paragraphStyle();
+    color: rgba(#fff, 0.7);
   }
   &__join-shop-link {
+    @include linkStyle();
   }
 }
 
