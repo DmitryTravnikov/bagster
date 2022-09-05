@@ -11,6 +11,9 @@
   &__content {
     width: 100%;
     @include flex(column, wrap, flex-start, center);
+    @media only screen and (min-width: 576px) {
+      width: 264px;
+    }
   }
   &__item {
     width: 100%;
