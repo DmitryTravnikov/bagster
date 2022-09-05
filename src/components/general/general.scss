@@ -4,17 +4,59 @@
 
 .general {
   background: $space-grey;
-  padding: 70px 0px;
   &__wrapper {
     @include flex(column, wrap, flex-start, center);
+    @media only screen and (min-width: 768px) {
+      @include flex(column, wrap, flex-start, center);
+    }
+    @media only screen and (min-width: 1200px) {
+      @include wrapper(1149px, auto);
+    }
   }
   &__content {
     width: 100%;
+    padding: 70px 0px;
     @include flex(column, wrap, flex-start, center);
+    @media only screen and (min-width: 768px) {
+      padding: 70px 0px 140px;
+      @include flex(column, wrap, flex-start, flex-start);
+      background: url('../general/img/general__discount.webp') no-repeat 180px
+        85% / 229px;
+      width: 640px;
+    }
+    @media only screen and (min-width: 992px) {
+      padding: 30px 0px 110px;
+      width: 880px;
+      background: url('../general/img/general__discount.webp') no-repeat 180px
+          90% / 179px,
+        url('../general/img/general__happy-girl.webp') no-repeat 100% 100% /
+          520px;
+    }
+    @media only screen and (min-width: 1200px) {
+      padding: 90px 0px 130px;
+      width: 100%;
+      background: url('../general/img/general__discount.webp') no-repeat 180px
+          91% / 229px,
+        url('../general/img/general__happy-girl.webp') no-repeat 100% 100% /
+          680px;
+    }
+  }
+  &__text {
+    width: 100%;
+    @include flex(column, wrap, flex-start, center);
+    @media only screen and (min-width: 576px) {
+      width: 360px;
+    }
+    @media only screen and (min-width: 768px) {
+      @include flex(column, wrap, flex-start, flex-start);
+    }
   }
   &__slogan {
     @include sloganStyle();
     margin-top: 0px;
+    @media only screen and (min-width: 768px) {
+      text-align: left;
+    }
   }
   &__headline {
     width: auto;
@@ -33,11 +75,25 @@
       line-height: 55px;
       color: rgba(#fff, 0.4);
       text-transform: capitalize;
+      @media only screen and (min-width: 992px) {
+        font-size: 61px;
+        line-height: 79px;
+      }
+    }
+    @media only screen and (min-width: 992px) {
+      font-size: 61px;
+      line-height: 79px;
+    }
+    @media only screen and (min-width: 768px) {
+      text-align: left;
     }
   }
   &__paragraph {
     @include paragraphStyle();
     color: rgba(#fff, 0.7);
+    @media only screen and (min-width: 768px) {
+      text-align: left;
+    }
   }
   &__join-shop-link {
     @include linkStyle();
@@ -63,4 +119,6 @@
 @media only screen and (min-width: 1400px) {
 }
 
-// * {@include outline()}
+* {
+  // @include outline();
+}
