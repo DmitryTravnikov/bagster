@@ -1,0 +1,144 @@
+@import '../../scss/variables';
+@import '../../scss/mixins';
+// @import '~bootstrap/scss/bootstrap-reboot';
+
+.general {
+  background: $space-grey;
+  &__wrapper {
+    @include flex(column, wrap, flex-start, center);
+    @media only screen and (min-width: 768px) {
+      @include flex(column, wrap, flex-start, center);
+    }
+    @media only screen and (min-width: 1200px) {
+      @include wrapper(1149px, auto);
+    }
+    @media only screen and (min-width: 1400px) {
+      @include wrapper(1404px, auto);
+    }
+  }
+  &__content {
+    width: 100%;
+    padding: 70px 0px;
+    @include flex(column, wrap, flex-start, center);
+    @media only screen and (min-width: 768px) {
+      padding: 70px 0px 140px;
+      @include flex(column, wrap, flex-start, flex-start);
+      background: url('../general/img/general__discount.webp') no-repeat 180px
+        85% / 229px;
+      width: 640px;
+    }
+    @media only screen and (min-width: 992px) {
+      padding: 30px 0px 110px;
+      width: 880px;
+      background: url('../general/img/general__discount.webp') no-repeat 180px
+          90% / 179px,
+        url('../general/img/general__happy-girl.webp') no-repeat 100% 100% /
+          520px;
+    }
+    @media only screen and (min-width: 1200px) {
+      padding: 90px 0px 130px;
+      width: 100%;
+      background: url('../general/img/general__discount.webp') no-repeat 180px
+          91% / 229px,
+        url('../general/img/general__happy-girl.webp') no-repeat 100% 100% /
+          680px;
+    }
+    @media only screen and (min-width: 1400px) {
+      padding: 110px 0px 210px 128px;
+      background: url('../general/img/general__discount.webp') no-repeat 339px
+          455px / 229px,
+        url('../general/img/general__happy-girl.webp') no-repeat 103% 100% /
+          849px;
+    }
+  }
+  &__text {
+    width: 100%;
+    @include flex(column, wrap, flex-start, center);
+    @media only screen and (min-width: 576px) {
+      width: 360px;
+    }
+    @media only screen and (min-width: 768px) {
+      @include flex(column, wrap, flex-start, flex-start);
+    }
+    @media only screen and (min-width: 1400px) {
+      width: 440px;
+    }
+  }
+  &__slogan {
+    @include sloganStyle();
+    margin-top: 0px;
+    @media only screen and (min-width: 768px) {
+      text-align: left;
+    }
+  }
+  &__headline {
+    width: auto;
+    margin: 0px;
+    font-family: $pb;
+    font-weight: 700;
+    font-size: 37px;
+    line-height: 55px;
+    color: #fff;
+    text-transform: capitalize;
+    text-align: center;
+    margin-top: 5px;
+    span {
+      @include logoStyle();
+      font-size: 37px;
+      line-height: 55px;
+      color: rgba(#fff, 0.4);
+      text-transform: capitalize;
+      @media only screen and (min-width: 992px) {
+        font-size: 61px;
+        line-height: 79px;
+      }
+    }
+    @media only screen and (min-width: 768px) {
+      text-align: left;
+    }
+    @media only screen and (min-width: 992px) {
+      font-size: 61px;
+      line-height: 79px;
+    }
+    @media only screen and (min-width: 1400px) {
+      margin-top: 9px;
+    }
+  }
+  &__paragraph {
+    @include paragraphStyle();
+    color: rgba(#fff, 0.7);
+    @media only screen and (min-width: 768px) {
+      text-align: left;
+    }
+    @media only screen and (min-width: 1400px) {
+      margin-top: 27px;
+    }
+  }
+  &__join-shop-link {
+    @include linkStyle();
+    margin-top: 36px;
+  }
+}
+
+// Bootstrap Media Queries
+// @include media-breakpoint-up(sm) {}
+// @include media-breakpoint-up(md) {}
+// @include media-breakpoint-up(lg) {}
+// @include media-breakpoint-up(xl) {}
+// @include media-breakpoint-up(xxl) {}
+
+// Media Queries
+@media only screen and (min-width: 576px) {
+}
+@media only screen and (min-width: 768px) {
+}
+@media only screen and (min-width: 992px) {
+}
+@media only screen and (min-width: 1200px) {
+}
+@media only screen and (min-width: 1400px) {
+}
+
+* {
+  // @include outline();
+}
