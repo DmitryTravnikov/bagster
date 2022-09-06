@@ -1,0 +1,172 @@
+@import '../../scss/variables';
+@import '../../scss/mixins';
+// @import '~bootstrap/scss/bootstrap-reboot';
+
+.feature {
+  background: #fff;
+  padding: 70px 0px;
+  @media only screen and (min-width: 1400px) {
+    padding: 129px 0px 80px;
+  }
+  &__wrapper {
+    @include flex(column, wrap, flex-start, center);
+  }
+  &__content {
+    width: 100%;
+    @include flex(column, wrap, flex-start, center);
+    overflow: hidden;
+    @media only screen and (min-width: 768px) {
+      width: 600px;
+      @include flex(row, wrap, space-between, center);
+    }
+    @media only screen and (min-width: 1200px) {
+      width: 100%;
+      @include flex(row, wrap, center, center);
+    }
+    @media only screen and (min-width: 1400px) {
+      @include flex(row, wrap, center, center);
+    }
+  }
+  &__item {
+    width: 100%;
+    text-decoration: none;
+    @include flex(column, wrap, flex-start, center);
+    margin-top: 50px;
+    &:first-child {
+      margin-top: 0px;
+    }
+    @media only screen and (min-width: 576px) {
+      width: 264px;
+    }
+    @media only screen and (min-width: 768px) {
+      &:first-child {
+        margin-top: 50px;
+      }
+    }
+    @media only screen and (min-width: 1200px) {
+      width: 230px;
+      margin-top: 0px;
+      margin-right: 30px;
+      &:first-child {
+        margin-top: 0px;
+      }
+      &:last-child {
+        margin-right: 0px;
+      }
+    }
+    @media only screen and (min-width: 1400px) {
+      width: 264px;
+      margin-right: 30px;
+      &:last-child {
+        margin-right: 0px;
+      }
+    }
+  }
+  &__item1 {
+  }
+  &__item2 {
+  }
+  &__item3 {
+  }
+  &__item4 {
+  }
+  &__item-headline {
+    width: auto;
+    margin: 0px;
+    font-family: $pm;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    color: rgba($space-grey, 0.8);
+    text-transform: capitalize;
+    text-align: center;
+    transition: 0.2s;
+  }
+  &__splitter {
+    border: none;
+    width: 100%;
+    height: 1px;
+    background: #fef5e6;
+    position: relative;
+    margin-top: 37px;
+    display: none;
+    &::before {
+      content: '';
+      width: 100%;
+      height: 5px;
+      background: $orange;
+      border-radius: 3px;
+      position: absolute;
+      top: 50%;
+      left: 0px;
+      transform: translateY(-50%);
+      transition: 0.2s;
+      opacity: 0;
+    }
+    @media only screen and (min-width: 768px) {
+      display: block;
+      background: #fef5e6;
+      &::after {
+        content: '';
+        width: 100%;
+        height: 1px;
+        background: #fef5e6;
+        position: absolute;
+        top: 0px;
+        left: 100%;
+      }
+    }
+    @media only screen and (min-width: 1400px) {
+      margin-top: 44px;
+    }
+  }
+  &__image {
+    width: 100%;
+    height: 306px;
+    border: 1px solid #d1d1d1;
+    border-radius: 10px;
+    margin-top: 43px;
+    @media only screen and (min-width: 1400px) {
+      margin-top: 37px;
+    }
+  }
+  &__image1 {
+    background: url('../feature/img/feature__item1.webp') no-repeat center;
+  }
+  &__image2 {
+    background: url('../feature/img/feature__item2.webp') no-repeat center;
+  }
+  &__image3 {
+    background: url('../feature/img/feature__item3.webp') no-repeat center;
+  }
+  &__image4 {
+    background: url('../feature/img/feature__item4.webp') no-repeat center;
+  }
+  &__item:hover &__item-headline {
+    color: $space-grey;
+  }
+  &__item:hover &__splitter::before {
+    opacity: 1;
+  }
+}
+
+// Bootstrap Media Queries
+// @include media-breakpoint-up(sm) {}
+// @include media-breakpoint-up(md) {}
+// @include media-breakpoint-up(lg) {}
+// @include media-breakpoint-up(xl) {}
+// @include media-breakpoint-up(xxl) {}
+
+// Media Queries
+@media only screen and (min-width: 576px) {
+}
+@media only screen and (min-width: 768px) {
+}
+@media only screen and (min-width: 992px) {
+}
+@media only screen and (min-width: 1200px) {
+}
+@media only screen and (min-width: 1400px) {
+}
+
+// * {@include outline()}
