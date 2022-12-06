@@ -3,19 +3,29 @@
 // @import '~bootstrap/scss/bootstrap-reboot';
 
 .about {
+  padding: 70px 0px;
   &__wrapper {
+    @include flex(column, wrap, flex-start, center);
   }
   &__content {
+    width: 100%;
+    @include flex(column, wrap, flex-start, center);
   }
   &__text {
+    width: 100%;
+    @include flex(column, wrap, flex-start, center);
   }
   &__slogan {
+    @include sloganStyle();
   }
   &__headline {
+    @include headlineStyleSmall();
   }
   &__paragraph {
+    @include paragraphStyle();
   }
   &__see-more-link {
+    @include linkStyle();
   }
 }
 
